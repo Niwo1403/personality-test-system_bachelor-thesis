@@ -116,7 +116,7 @@ def test_get_certificate__with_success(client: FlaskClient, session,
                   (no_use_token, create_evaluated_evaluable_test_answer_for_token(no_use_token))]
 
     for test_token, evaluable_test_answer in test_cases:
-        token_was_evaluated_before = evaluable_test_answer.was_evaluated()
+        answer_was_evaluated_before = evaluable_test_answer.was_evaluated()
         pre_max_usage_count = test_token.max_usage_count
         resp = client.get(ROUTE, query_string={"evaluable-test-answer-id": evaluable_test_answer.id,
                                                "token": test_token.token})
@@ -132,7 +132,7 @@ def test_get_certificate__with_success(client: FlaskClient, session,
         assert resp.status_code == 200, (f"Can't GET certificate from {ROUTE} with {evaluable_test_answer}"
                                          f"\n\nReceived response:\n{resp.get_data(True)}")
 
-        assert test_token.max_usage_count == pre_max_usage_count if token_was_evaluated_before \
+        assert test_token.max_usage_count == pre_max_usage_count if answer_was_evaluated_before \
             else test_token.max_usage_count is None or test_token.max_usage_count + 1 == pre_max_usage_count, \
             (f"Got wrong max_usage_count after request with {test_token} & {evaluable_test_answer}"
              f"\n\nReceived response:\n{resp.get_data(True)}")

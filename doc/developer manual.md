@@ -34,7 +34,7 @@ Note: you maybe should read the [user manual introduction](user%20manual.md#intr
 ### Setting up git
 - Download git [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
   - Information about the local setup after installation, like setting your username and password, are described [here](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity)
-- To clone the repository run `git clone https://github.com/Personality-Test-Berlin/personality_test_system.git`, this will create a directory personality_test_system in your current working directory
+- To clone the repository run `git clone https://github.com/Niwo1403/personality-test-system_bachelor-thesis.git`, this will create a directory personality_test_system in your current working directory
 
 ### Create Python venv (virtual environment)
 _Note: create the venv using the Python installation, you installed earlier_

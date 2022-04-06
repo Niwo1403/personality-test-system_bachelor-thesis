@@ -66,7 +66,7 @@ def get_token_creator():
                     {
                         "type": "boolean",
                         "name": EXPIRES_SURVEY_KEYWORD,
-                        "title": "Soll der Token zeitlich beschrenkt sein?",
+                        "title": "Soll der Token zeitlich beschränkt sein?",
                         "defaultValue": "true",
                         "isRequired": True
                     },
